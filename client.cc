@@ -1,10 +1,8 @@
- /**
- * @file client.cc
- * @author yanshiguang02@baidu.com
- * @date 2014/05/29 10:02:20
- * @brief 
- *  
- **/
+// Copyright (c) 2014, Baidu.com, Inc. All Rights Reserved
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+//
+// Author: yanshiguang02@baidu.com
 
 #include <set>
 #include <unistd.h>
@@ -42,15 +40,16 @@ static inline bool SetNonBlock(int fd)
 }
 
 int main(int argc, char* argv[]) {
-    if (argc < 2) {
+    if (argc < 3) {
+        printf("Use: %s host port\n", argv[0]);
         return 1;
     }
-    int port = atoi(argv[1]);
+    int port = atoi(argv[2]);
     int fd = socket(PF_INET, SOCK_STREAM, 0);
     struct sockaddr_in servaddr;
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
-    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
     servaddr.sin_port = htons(port);
     int ret = connect(fd, (struct sockaddr*)&servaddr, sizeof(servaddr));
     if (ret < 0) {

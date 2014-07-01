@@ -1,10 +1,8 @@
- /**
- * @file client.cc
- * @author yanshiguang02@baidu.com
- * @date 2014/05/29 10:02:20
- * @brief 
- *  
- **/
+// Copyright (c) 2014, Baidu.com, Inc. All Rights Reserved
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+//
+// Author: yanshiguang02@baidu.com
 
 #include <set>
 #include <unistd.h>
@@ -23,6 +21,7 @@
 
 volatile long rpcs = 0;
 bool quit = false;
+bool send_response = false;
 
 void* monitor(void* arg) {
     long last_rpcs = 0;
@@ -39,17 +38,25 @@ void* worker(void* arg) {
     printf("fd = %d\n", fd);
     int data;
     while(read(fd, &data, sizeof(data)) > 0) {
-        write(fd, &data, sizeof(data));
+        if (send_response) {
+            write(fd, &data, sizeof(data));
+        }
         bfs::atomic_add64(&rpcs, 1);
     }
     close(fd);
     printf("connect closed\n");
     return NULL;
 }
+
 int main(int argc, char* argv[]) {
     if (argc < 2) {
+        printf("Use: %s port\n", argv[0]);
         return 1;
     }
+    if (argc == 3) {
+        send_response = true;
+    }
+
     signal(SIGPIPE, SIG_IGN);
 
     int port = atoi(argv[1]);
