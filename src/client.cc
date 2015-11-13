@@ -16,6 +16,9 @@
 #include <fcntl.h>
 #include <sys/epoll.h>
 
+namespace baidu {
+namespace ether {
+
 void* worker(void* arg) {
     int fd = reinterpret_cast<long>(arg);
     int data;
@@ -39,24 +42,24 @@ static inline bool SetNonBlock(int fd)
     return true;
 }
 
-int main(int argc, char* argv[]) {
+int Run(int argc, char* argv[]) {
     if (argc < 3) {
         printf("Use: %s host port\n", argv[0]);
         return 1;
     }
+    const char* host = argv[1];
     int port = atoi(argv[2]);
     int fd = socket(PF_INET, SOCK_STREAM, 0);
     struct sockaddr_in servaddr;
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
-    inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
+    inet_pton(AF_INET, host, &servaddr.sin_addr);
     servaddr.sin_port = htons(port);
     int ret = connect(fd, (struct sockaddr*)&servaddr, sizeof(servaddr));
     if (ret < 0) {
-        fprintf(stderr, "connect to %d fail\n", port);
+        fprintf(stderr, "connect to %s %d fail\n", host, port);
         return 2;
     }
-    int data = 0x82882882;
     SetNonBlock(fd);
 
     int epfd = epoll_create(1024);
@@ -66,17 +69,17 @@ int main(int argc, char* argv[]) {
     epoll_ctl(epfd, EPOLL_CTL_ADD, fd, &ev);
 
     int last_events;
+    char buffer[10240] = {};
     while (1 == epoll_wait(epfd, &ev, 1, -1)) {
         //printf("epoll %d\n", ev.events);
         last_events = ev.events;
         if (ev.events & EPOLLERR) {
-            printf("EPOLLERR on %d\n", ev.data.fd);
+            fprintf(stderr, "EPOLLERR on %d\n", ev.data.fd);
             return 3;
         }
         int rev = 0;
         if (ev.events & EPOLLIN) {
-            while((rev = read(ev.data.fd, &data, sizeof(data))) > 0) {
-            //    printf("read 4 bytes\n");
+            while((rev = read(ev.data.fd, buffer, sizeof(buffer))) > 0) {
             }
             if (rev == 0) {
                 printf("Server close connection\n");
@@ -84,7 +87,7 @@ int main(int argc, char* argv[]) {
             }
         }
         if (ev.events & EPOLLOUT) {
-            while(write(ev.data.fd, &data, sizeof(data)) > 0) {
+            while(write(ev.data.fd, buffer, sizeof(buffer)) > 0) {
             //    printf("write 4 bytes\n");
             }
         }
@@ -92,4 +95,10 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
+}
+}
+
+int main(int argc, char* argv[]) {
+    return baidu::ether::Run(argc, argv);
+}
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */

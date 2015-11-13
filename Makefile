@@ -1,14 +1,15 @@
 
 CXX=g++
-CXXFLAGS=-g -Wall
+CXXFLAGS=-g -Wall -Werror -I./common/include
 all: client server
+
 
 clean:
 	rm -rf client server *.o
-client: client.cc
-	$(CXX) $(CXXFLAGS) client.cc -o client -lpthread
+client: src/client.cc
+	$(CXX) $(CXXFLAGS) src/client.cc -o client -lpthread
 
-server: server.cc
-	$(CXX) $(CXXFLAGS) server.cc -o server -lpthread
+server: src/server.cc
+	$(CXX) $(CXXFLAGS) src/server.cc -o server -lpthread
 
 

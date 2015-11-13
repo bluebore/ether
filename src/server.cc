@@ -17,18 +17,23 @@
 #include <netdb.h>
 #include <signal.h>
 
-#include "atomic.h"
+#include <counter.h>
 
-volatile long rpcs = 0;
+namespace baidu {
+namespace ether {
+
+common::Counter g_rpcs[11];
 bool quit = false;
 bool send_response = false;
 
 void* monitor(void* arg) {
-    long last_rpcs = 0;
     while(!quit) {
         usleep(1000000);
-        printf("QPS: %ld\n", rpcs - last_rpcs);
-        last_rpcs = rpcs;
+        long qps = 0;
+        for (int i = 0; i < 11; i++) {
+            qps += g_rpcs[i].Clear();
+        }
+        fprintf(stderr, "QPS: %ld\n", qps);
     }
     return NULL;
 }
@@ -36,19 +41,20 @@ void* monitor(void* arg) {
 void* worker(void* arg) {
     int fd = reinterpret_cast<long>(arg);
     printf("fd = %d\n", fd);
-    int data;
-    while(read(fd, &data, sizeof(data)) > 0) {
+    char buffer[10240];
+    int len = 0;
+    while((len = read(fd, &buffer, sizeof(buffer))) > 0) {
         if (send_response) {
-            write(fd, &data, sizeof(data));
+            write(fd, &buffer, len);
         }
-        bfs::atomic_add64(&rpcs, 1);
+        g_rpcs[fd%11].Add(len/128);
     }
     close(fd);
     printf("connect closed\n");
     return NULL;
 }
 
-int main(int argc, char* argv[]) {
+int Run(int argc, char* argv[]) {
     if (argc < 2) {
         printf("Use: %s port\n", argv[0]);
         return 1;
@@ -95,6 +101,13 @@ int main(int argc, char* argv[]) {
         pthread_join(*it, NULL);
     }
     return 0;
+}
+
+}
+}
+
+int main(int argc, char* argv[]) {
+    return baidu::ether::Run(argc, argv);
 }
 
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */
