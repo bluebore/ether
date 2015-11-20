@@ -1,0 +1,14 @@
+
+option cc_generic_services = true;
+
+message EchoRequest {
+  optional bytes msg = 1;
+}
+
+message EchoResponse {
+  optional bytes msg = 1;
+}
+
+service EchoService {
+  rpc Echo(EchoRequest) returns(EchoResponse);
+}

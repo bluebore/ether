@@ -16,18 +16,10 @@
 #include <fcntl.h>
 #include <sys/epoll.h>
 
+#include "src/proto/rpc.pb.h"
+
 namespace baidu {
 namespace ether {
-
-void* worker(void* arg) {
-    int fd = reinterpret_cast<long>(arg);
-    int data;
-    while(read(fd, &data, sizeof(data)) > 0) {
-        write(fd, &data, sizeof(data));
-    }
-    close(fd);
-    return NULL;
-}
 
 static inline bool SetNonBlock(int fd)
 {
@@ -40,6 +32,23 @@ static inline bool SetNonBlock(int fd)
         return false;
     } 
     return true;
+}
+
+
+int SendRequest(int fd, const std::string& msg) {
+    return 0;
+}
+
+int BuildRequest(const std::string& method, const std::string& msg, std::string* output) {
+    RpcRequest request;
+    request.set_msg(msg);
+    std::string str;
+    request.SerializeToString(&str);
+    RpcMeta meta;
+    meta.set_method(method);
+    request.SerializeToString(output);
+    output->append(str);
+    return output->size();
 }
 
 int Run(int argc, char* argv[]) {
@@ -87,8 +96,11 @@ int Run(int argc, char* argv[]) {
             }
         }
         if (ev.events & EPOLLOUT) {
+            std::string msg;
+            BuildRequest("RPC", "haha", &msg);
             while(write(ev.data.fd, buffer, sizeof(buffer)) > 0) {
-            //    printf("write 4 bytes\n");
+            //while(write(ev.data.fd, msg.data(), msg.size()) > 0) {
+                //    printf("write 4 bytes\n");
             }
         }
     }
