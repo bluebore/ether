@@ -2,13 +2,8 @@
     "docs": [
         {
             "location": "/", 
-            "text": "The Baidu File System\n\n\nEnglish Doc\n\n\n\u4e2d\u6587\u6587\u6863", 
+            "text": "English Doc\n\n\n\u4e2d\u6587\u6587\u6863", 
             "title": "Home"
-        }, 
-        {
-            "location": "/#the-baidu-file-system", 
-            "text": "", 
-            "title": "The Baidu File System"
         }, 
         {
             "location": "/#english-doc", 
