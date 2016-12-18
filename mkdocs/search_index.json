@@ -3,7 +3,7 @@
         {
             "location": "/README/", 
             "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863", 
-            "title": "Home"
+            "title": "README"
         }, 
         {
             "location": "/README/#ether", 
@@ -26,29 +26,24 @@
             "title": "\u4f7f\u7528"
         }, 
         {
-            "location": "/README/", 
-            "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863", 
-            "title": "About"
+            "location": "/user_guide/", 
+            "text": "ether\u7528\u6237\u624b\u518c\n\n\n\u554a\n\n\na", 
+            "title": "User guide"
         }, 
         {
-            "location": "/README/#ether", 
+            "location": "/user_guide/#ether", 
             "text": "", 
-            "title": "ether\u6587\u6863"
+            "title": "ether\u7528\u6237\u624b\u518c"
         }, 
         {
-            "location": "/README/#_1", 
-            "text": "ether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.", 
-            "title": "\u7b80\u4ecb"
-        }, 
-        {
-            "location": "/README/#_2", 
+            "location": "/user_guide/#_1", 
             "text": "", 
-            "title": "\u6784\u5efa"
+            "title": "\u554a"
         }, 
         {
-            "location": "/README/#_3", 
-            "text": "\u7528\u6237\u6587\u6863", 
-            "title": "\u4f7f\u7528"
+            "location": "/user_guide/#a", 
+            "text": "", 
+            "title": "a"
         }
     ]
 }
