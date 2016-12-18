@@ -12,13 +12,13 @@
     
         
     <url>
-     <loc>/cn/README/</loc>
+     <loc>/cn/quick_start/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/cn/user_guide/</loc>
+     <loc>/cn/README/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -114,12 +114,6 @@
     </url>
         
     <url>
-     <loc>/cn/quick_start/</loc>
-     <lastmod>2016-12-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/cn/requirement/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
@@ -127,12 +121,6 @@
         
     <url>
      <loc>/cn/roadmap/</loc>
-     <lastmod>2016-12-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cn/user_guide/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
