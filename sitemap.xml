@@ -10,19 +10,29 @@
     
 
     
+        
     <url>
-     <loc>/README/</loc>
+     <loc>/cn/README/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/cn/user_guide/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
+        
     <url>
-     <loc>/user_guide/</loc>
+     <loc>/en/README/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
 </urlset>

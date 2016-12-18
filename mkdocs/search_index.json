@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863", 
+            "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863(\u4e2d\u6587)\n\n\n\u7528\u6237\u6587\u6863(\u82f1\u6587)", 
             "title": "Home"
         }, 
         {
@@ -22,53 +22,78 @@
         }, 
         {
             "location": "/#_3", 
-            "text": "\u7528\u6237\u6587\u6863", 
+            "text": "\u7528\u6237\u6587\u6863(\u4e2d\u6587)  \u7528\u6237\u6587\u6863(\u82f1\u6587)", 
             "title": "\u4f7f\u7528"
         }, 
         {
-            "location": "/README/", 
+            "location": "/cn/README/", 
             "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863", 
             "title": "README"
         }, 
         {
-            "location": "/README/#ether", 
+            "location": "/cn/README/#ether", 
             "text": "", 
             "title": "ether\u6587\u6863"
         }, 
         {
-            "location": "/README/#_1", 
+            "location": "/cn/README/#_1", 
             "text": "ether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.", 
             "title": "\u7b80\u4ecb"
         }, 
         {
-            "location": "/README/#_2", 
+            "location": "/cn/README/#_2", 
             "text": "", 
             "title": "\u6784\u5efa"
         }, 
         {
-            "location": "/README/#_3", 
+            "location": "/cn/README/#_3", 
             "text": "\u7528\u6237\u6587\u6863", 
             "title": "\u4f7f\u7528"
         }, 
         {
-            "location": "/user_guide/", 
+            "location": "/cn/user_guide/", 
             "text": "ether\u7528\u6237\u624b\u518c\n\n\n\u554a\n\n\na", 
-            "title": "User guide"
+            "title": "UserGuide"
         }, 
         {
-            "location": "/user_guide/#ether", 
+            "location": "/cn/user_guide/#ether", 
             "text": "", 
             "title": "ether\u7528\u6237\u624b\u518c"
         }, 
         {
-            "location": "/user_guide/#_1", 
+            "location": "/cn/user_guide/#_1", 
             "text": "", 
             "title": "\u554a"
         }, 
         {
-            "location": "/user_guide/#a", 
+            "location": "/cn/user_guide/#a", 
             "text": "", 
             "title": "a"
+        }, 
+        {
+            "location": "/en/README/", 
+            "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863", 
+            "title": "README"
+        }, 
+        {
+            "location": "/en/README/#ether", 
+            "text": "", 
+            "title": "ether\u6587\u6863"
+        }, 
+        {
+            "location": "/en/README/#_1", 
+            "text": "ether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.", 
+            "title": "\u7b80\u4ecb"
+        }, 
+        {
+            "location": "/en/README/#_2", 
+            "text": "", 
+            "title": "\u6784\u5efa"
+        }, 
+        {
+            "location": "/en/README/#_3", 
+            "text": "\u7528\u6237\u6587\u6863", 
+            "title": "\u4f7f\u7528"
         }
     ]
 }
