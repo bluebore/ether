@@ -2,23 +2,23 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Baidu FileSystem\n\n\nEnglish\n\n\n\u7528\u6237\u6587\u6863(\u82f1\u6587)\n\n\n\u4e2d\u6587\n\n\n\u7528\u6237\u6587\u6863(\u4e2d\u6587)", 
+            "text": "The Baidu File System\n\n\nEnglish Doc\n\n\n\u4e2d\u6587\u6587\u6863", 
             "title": "Home"
         }, 
         {
-            "location": "/#baidu-filesystem", 
+            "location": "/#the-baidu-file-system", 
             "text": "", 
-            "title": "Baidu FileSystem"
+            "title": "The Baidu File System"
         }, 
         {
-            "location": "/#english", 
-            "text": "\u7528\u6237\u6587\u6863(\u82f1\u6587)", 
-            "title": "English"
+            "location": "/#english-doc", 
+            "text": "", 
+            "title": "English Doc"
         }, 
         {
             "location": "/#_1", 
-            "text": "\u7528\u6237\u6587\u6863(\u4e2d\u6587)", 
-            "title": "\u4e2d\u6587"
+            "text": "", 
+            "title": "\u4e2d\u6587\u6587\u6863"
         }, 
         {
             "location": "/cn/README/", 
