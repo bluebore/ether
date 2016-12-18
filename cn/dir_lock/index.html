@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>dir_lock - Ether</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "dir_lock";
+    var mkdocs_page_input_path = "cn/dir_lock.md";
+    var mkdocs_page_url = "/cn/dir_lock/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Ether</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CN</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../README/">README</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">UserGuide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">api</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_desigin/">bfs_desigin</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_HA/">bfs_HA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_mount/">bfs_mount</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_qa/">bfs_qa</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../committer/">committer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../design/">design</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">dir_lock</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">目录锁背景</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">整体设计</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">接口</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_4">异常处理</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#todo">TODO</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../DiskManager/">DiskManager</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../easy_fix/">easy_fix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../file_lock/">file_lock</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../garbage_collection/">garbage_collection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HA_log_compress/">HA_log_compress</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how_to_contribute/">how_to_contribute</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../log_rule/">log_rule</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../quick_start/">quick_start</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../requirement/">requirement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../roadmap/">roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">user_guide</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>EN</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../en/README/">README</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../en/roadmap/">RoadMap</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Ether</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>CN &raquo;</li>
+        
+      
+    
+    <li>dir_lock</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">目录锁背景</h1>
+<p>Tera中，<code>Master</code>通过<code>Nexus</code>判断<code>TabletNode</code>是否仍在提供服务，当<code>Master</code>认为某个<code>TabletNode</code>已无法提供服务后，会将其上面所有<code>Tablet</code>迁移到其它<code>TabletNode</code>上进行Load。然而，在发生网络分区，或者网络延时造成的Tera <code>Master</code>处理时序错乱时，可能造成旧的<code>TabletNode</code>上仍Load某个<code>Tablet</code>时，同时给另外一个新的<code>TabletNode</code>发送Load某个<code>Tablet</code>的命令，造成同一个<code>Tablet</code>被多台<code>TabletNode</code>同时Load，从而造成数据写入错乱。因此，必须依赖Tera使用的底层分布式文件系统来彻底解决多重Load问题：Tera中的每个<code>Tablet</code>的数据都存放在一个单独的目录下，在对<code>Tablet</code>进行Load时，持有对应目录的一个排它锁，便可以防止有其它<code>TabletNode</code>同时Load此<code>Tablet</code></p>
+<h1 id="_2">整体设计</h1>
+<ol>
+<li>在<code>FileInfo</code>中添加<code>lock_status</code>以及<code>holder</code>标记，<code>lock_status</code>可能处于<code>locked</code>、<code>unlock</code>、<code>cleaning</code>三种状态，分别对应目录已上锁，未上锁，正在清锁三种状态，当状态为<code>locked</code>时，<code>holder</code>中记录的为持锁者的标识(<code>ip:port:timestamp</code>，此标识由客户端(sdk)在加锁时发送给<code>NameServer</code>，在客户端存活期间保持不变</li>
+<li>在对目录进行加锁时，首先检查此目录的<code>FileInfo</code>中<code>lock_status</code>是否为<code>unlock</code>:</li>
+<li>如果是，则将其状态更改为<code>locked</code>，并连同调用者的<code>ip:port</code>一同持久化到<code>namespace</code>中，加锁成功</li>
+<li>如果不是，则目录锁的状态为<code>locked</code>或<code>cleaning</code>，加锁失败，将锁目前的状态返回给调用者</li>
+<li>在对目录释放锁时，首先检查此目录的<code>FileInfo</code>中<code>lock_statu</code>是否为<code>locked</code>:</li>
+<li>如果是，将其状态改为<code>cleaning</code>并持久化到<code>namespace</code>中，然后，将此目录下所有正在写的文件及其所处在的<code>ChunkServer</code>地址均扫描出来，构造一个<code>CloseFilesCtx</code>结构，后台依次将其关闭，待全部文件均收到<code>BlockReceived</code>之后，可以认为全部文件已经被关闭，此时将<code>namespace</code>中对应目录的锁状态更改为<code>unlocked</code>，后续允许对此目录进行再次加锁</li>
+<li>如果不是，则此RPC为乱序或者重试的调用，可以不用处理，日志中将其记录即可</li>
+<li>在创建新文件或者删除文件时，先检查其父目录的<code>FileInfo</code>中锁的状态:</li>
+<li>如果为<code>unlock</code>，则说明此目录并没有上锁，允许创建或删除</li>
+<li>如果为<code>locked</code>，则说明此目录上有锁，这时检查调用者<code>ip:port</code>是否与<code>FileInfo</code>中记录的一致，以便确认此调用者是否有权对此目录进行写操作，如果一致，则允许创建或删除，否则，拒绝创建</li>
+<li>如果为<code>cleaning</code>，说明此时刚刚将锁释放，正在关闭所需文件，对调用者返回正在清锁的错误码，调用者可以进行重试</li>
+</ol>
+<h1 id="_3">接口</h1>
+<ol>
+<li>message定义</li>
+</ol>
+<p><code>StatusCode {</code></p>
+<pre><code>   `…...`
+
+   `kLocked`
+
+   `kUnlock`
+
+   `kCleaning`
+
+  `…..`
+</code></pre>
+<p><code>}</code>  </p>
+<p><code>message LockDirRequest {</code></p>
+<pre><code>   `optional int64 sequence_id = 1;`
+
+   `optional string dir_path = 2;`
+</code></pre>
+<p><code>}</code></p>
+<p><code>message LockDirResponse {</code></p>
+<pre><code>`optional int64 sequence_id = 1;`
+
+  `optional StatusCode status = 2;`
+
+ `}`
+</code></pre>
+<p><code>message UnlockDirRequest {</code></p>
+<pre><code>  `optional int64 sequence_id = 1;`
+
+  `optional string dir_path = 2;`
+
+  `optional StatusCode status = 3;`
+
+`}`
+</code></pre>
+<p><code>message UnlockDirResponse {</code></p>
+<pre><code>  `optional int64 sequence_id = 1;`
+
+  `optional StatusCode status = 2;`
+
+ `}`
+</code></pre>
+<p>2.对指定目录加锁:</p>
+<p><code>void LockDir(::google::protobuf::RpcController* controller,</code></p>
+<p><code>const LockDirRequest* request,</code></p>
+<p><code>LockDirResponse* response,</code></p>
+<p><code>::google::protobuf::Closure* done);</code></p>
+<p><code>request</code>中存有需要加锁的路径，<code>response</code>中的<code>status</code>表明加锁是否成功</p>
+<p>3.释放掉指定目录的锁</p>
+<p><code>void UnlockDir(::google::protobuf::RpcController* controller,</code></p>
+<p><code>const UnlockDirRequest* request,</code></p>
+<p><code>UnlockDirResponse* response,</code></p>
+<p><code>::google::protobuf::Closure* done);</code></p>
+<p><code>request</code>中存有需要解锁的路径，<code>response</code>中的<code>status</code>表明是否解锁成功</p>
+<h1 id="_4">异常处理</h1>
+<ol>
+<li>对某个目录加完锁后，<code>NameServer</code>宕机或重启</li>
+</ol>
+<p>由于锁状态是持久化在<code>FileInfo</code>中，HA方案已天然的将<code>namespace</code>同步到多台<code>NameServer</code>上，所以无论是宕机重机还是切主，都不影响锁信息的正确性。若重启时发现<code>FileInfo</code>中锁的状态为<code>cleaning</code>，则在<code>RebuildBlockMapping</code>时将此目录下所有正在写的文件记录下来，重新进行清锁流程 </p>
+<h1 id="todo">TODO</h1>
+<ol>
+<li>
+<p>此方案中，清锁动作为Tera的<code>Master</code>主动发出，未来可以考虑<code>TabletNode</code>与<code>NameServer</code>维持心跳，心跳超时后主动清锁的设计</p>
+</li>
+<li>
+<p>此方案中，不涉及递归加锁问题，例如对目录<code>home/work</code>进行加锁时，并不会对<code>/home</code>目录进行加锁</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DiskManager/" class="btn btn-neutral float-right" title="DiskManager">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../design/" class="btn btn-neutral" title="design"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../design/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../DiskManager/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

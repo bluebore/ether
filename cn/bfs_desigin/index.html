@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>bfs_desigin - Ether</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "bfs_desigin";
+    var mkdocs_page_input_path = "cn/bfs_desigin.md";
+    var mkdocs_page_url = "/cn/bfs_desigin/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Ether</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CN</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../README/">README</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">UserGuide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">api</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">bfs_desigin</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#bfs">BFS整体设计文档</a></li>
+                
+                    <li><a class="toctree-l4" href="#_1">背景</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">系统架构</a></li>
+                
+                    <li><a class="toctree-l4" href="#nameserver">Nameserver</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_HA/">bfs_HA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_mount/">bfs_mount</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bfs_qa/">bfs_qa</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../committer/">committer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../design/">design</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../dir_lock/">dir_lock</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../DiskManager/">DiskManager</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../easy_fix/">easy_fix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../file_lock/">file_lock</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../garbage_collection/">garbage_collection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HA_log_compress/">HA_log_compress</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how_to_contribute/">how_to_contribute</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../log_rule/">log_rule</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../quick_start/">quick_start</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../requirement/">requirement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../roadmap/">roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">user_guide</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>EN</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../en/README/">README</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../en/roadmap/">RoadMap</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Ether</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>CN &raquo;</li>
+        
+      
+    
+    <li>bfs_desigin</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="bfs">BFS整体设计文档</h1>
+<h2 id="_1">背景</h2>
+<p>百度的核心数据库Tera将数据持久化在分布式文件系统上，分布式文件系统的性能、可用性和扩展性对整个上层搜索业务的稳定性与效果有着至关重要的影响。现有的分布式文件系统无法很好地满足这几方面的要求，所以我们从Tera需求出发，开发了百度自己的分布式文件系统。</p>
+<h2 id="_2">系统架构</h2>
+<p>系统主要由Nameserver，Chunkserver和ClientSDk三部分构成。其中Nameserver是BFS的“大脑”，负责整个文件系统的目录树及每个文件的元信息的持久化存储和更新；Chunkserver是提供文件读写服务的实体；ClientSDk包括提供给管理员使用的管理命令工具bfs_client和给用户使用的SDK。除此之外，BFS还提用一个可视化Web界面用于实时反映集群的状态。</p>
+<h2 id="nameserver">Nameserver</h2>
+<p>Nameserver是BFS的“大脑”，负责存储及更新目录树及每个文件的元信息，所有需要读取或更新元信息的操作都需要通过Nameserver，而Nameserver的不可用将导致整个文件系统瘫痪。因此，在BFS的设计中，我们重点关注Nameserver的性能和可用性。</p>
+<h3 id="nameserver_1">Nameserver中的类</h3>
+<p>Nameserver中主要维护三个类，目录树，BlockMapping以及ChunkserverManager。</p>
+<h4 id="_3">目录树</h4>
+<p>BFS的设计目标是存储海量文件，因此目录树结构可能无法全部存在内存中。而如前面所说，作为全局元信息的唯一管理者，目录树结构需要支持大吞吐的访问。因此，我们选择leveldb来存储BFS的目录树。</p>
+<h5 id="_4">目录树存储</h5>
+<p>在BFS的目录树中，每一个目录或文件的存储格式为 <code>父目录 entry_id + 目录/文件名 -&gt; 目录/文件元信息</code>。其中<code>entry_id</code>是用来唯一标识某个目录或文件的id，根目录的<code>entry_id</code>为1，<code>父目录entry_id</code>为1，目录的元信息包括目录的<code>entry_id</code>、读写权限及创建时间等；文件的元信息还会包括文件的大小，版本，副本数量，及文件对应的所有block的<code>block_id</code>等。例如形如<code>/home/dir/file</code>的一个目录结构在BFS中的实际存储如下：</p>
+<blockquote>
+<p>0/<br />
+1home -&gt; meta(<code>entry_id</code>=2, ctime=...)<br />
+2dir -&gt; meta(<code>entry_id</code>=3, ctime=...)<br />
+3file -&gt; meta(<code>entry_id</code>=4, block=1,2,3, size=...)  </p>
+</blockquote>
+<p>这样的设计可以实现高效的list和rename操作。</p>
+<h5 id="_5">文件查找</h5>
+<p>查找文件时按层级查找，先查找到父目录的<code>entry_id</code>，再以父目录<code>entry_id</code> + 子目录名为key查找子目录的<code>entry_id</code>，以此类推。例如，查找<code>/home/dir/file</code>的过程如下：</p>
+<blockquote>
+<p>查找根目录的<code>entry_id</code>，再以根目录的<code>entry_id</code>+home，也就是<code>1home</code>，读取/home目录的meta信息，获得/home的<code>entry_id</code>，2<br />
+同上查找<code>2dir</code>读取<code>entry_id</code>，3<br />
+最后取得<code>3file</code>  </p>
+</blockquote>
+<p>查找文件的复杂度等于目录深度。</p>
+<h5 id="list">list目录</h5>
+<p>因为目录树在leveldb中存储的key为<code>父目录entry_id+名字</code>，所以同一目录下的目录和文件都有同样的前缀。只需查找到父目录的<code>entry_id</code>再扫描出以此<code>entry_id</code>开头的数据，就可以获得该目录下的所有目录和文件。</p>
+<h5 id="rename">rename</h5>
+<p>只需更改<code>父目录entry_id</code>和文件名就可以实现rename。</p>
+<h4 id="blockmapping">BlockMapping</h4>
+<p>在BFS中，文件被切分成block，每一个block都有一个唯一的id作为标识，称为block_id。每个block都会有多个副本，存储在多个Chunkserver上（默认为三个），以提高数据的可靠性和可用性，每一个副本称为一个replica。BlockMapping维护了block和其replica所在Chunkserver的映射关系。</p>
+<h4 id="chunkservermanager">ChunkserverManager</h4>
+<p>ChunkserverManager主要维护集群中所有Chunkserver的状态。</p>
+<h5 id="_6">心跳</h5>
+<p>每个Chunkserver定时向Nameserver发送心跳，心跳内容包括当前Chunkserver的读写负载，机器磁盘负载等统计信息。ChunkserverManager维护了这些信息。如果Chunkserver连续一段时间都没有发送心跳，Nameserver会认为这个Chunkserver已经挂掉，从而发起block的内存状态更新、副本恢复等操作。</p>
+<h5 id="_7">负载均衡</h5>
+<h3 id="nameserver_2">Nameserver中的主要操作</h3>
+<h4 id="_8">创建文件</h4>
+<p>SDK端向Nameserver发起创建文件的操作，Nameserver首先检查文件路径的合法性，然后由ChunkserverManager根据负载均衡逻辑选取Chunkserver，记录在BlockMapping里，然后返回给SDK，SDK再向三个Chunkserver发起写请求。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../bfs_HA/" class="btn btn-neutral float-right" title="bfs_HA">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../api/" class="btn btn-neutral" title="api"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../api/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../bfs_HA/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

@@ -23,12 +23,132 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/cn/api/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/bfs_desigin/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/bfs_HA/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/bfs_mount/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/bfs_qa/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/committer/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/design/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/dir_lock/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/DiskManager/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/easy_fix/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/file_lock/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/garbage_collection/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/HA_log_compress/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/how_to_contribute/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/log_rule/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/quick_start/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/requirement/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/roadmap/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cn/user_guide/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
         
     <url>
      <loc>/en/README/</loc>
+     <lastmod>2016-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/en/roadmap/</loc>
      <lastmod>2016-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>user_guide - Ether</title>
+  <title>how_to_contribute - Ether</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "user_guide";
-    var mkdocs_page_input_path = "cn/user_guide.md";
-    var mkdocs_page_url = "/cn/user_guide/";
+    var mkdocs_page_name = "how_to_contribute";
+    var mkdocs_page_input_path = "cn/how_to_contribute.md";
+    var mkdocs_page_url = "/cn/how_to_contribute/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -67,7 +67,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="./">UserGuide</a>
+        <a class="" href="../user_guide/">UserGuide</a>
         
     </li>
 
@@ -164,8 +164,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../how_to_contribute/">how_to_contribute</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">how_to_contribute</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">怎样成为贡献者</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -199,19 +206,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">user_guide</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ether">ether用户手册</a></li>
-                
-                    <li><a class="toctree-l4" href="#_1">啊</a></li>
-                
-                    <li><a class="toctree-l4" href="#a">a</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">user_guide</a>
         
     </li>
 
@@ -267,7 +263,7 @@
         
       
     
-    <li>user_guide</li>
+    <li>how_to_contribute</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -277,9 +273,26 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ether">ether用户手册</h1>
-<h2 id="_1">啊</h2>
-<h2 id="a">a</h2>
+                <h1 id="_1">怎样成为贡献者</h1>
+<ol>
+<li>首先fork本项目到你的个人目录, 尝试修改你发现的问题</li>
+<li>代码风格请遵守Google编码规范, 但使用4空格缩进</li>
+<li>如果代码里要打日志, 请遵守<a href="../log_rule/">BFS日志规范</a></li>
+<li>开发完成后自测功能是否正确，并运行<code>make test</code>及<code>make check</code>检查是否可以通过已有的测试case</li>
+<li>
+<p>提交代码时的commit message 请遵守:<br />
+    a. 首行使用英文描述 用简短的句子描述你做出的更改, 首字母大写.<br />
+    b. 第二行空行, 第三行写(#对应的issue号).<br />
+    c. 后面用英文详细描述你的升级的细节, 如果首行已经描述清楚这里也可以省略.<br />
+    示例如下:<br />
+    Add RebuildBlock in BlockMapping  </p>
+<p>(#617) 'AddNewBlock' is used both in adding new blocks and rebuild<br />
+exist blocks. Use separate functions to deal with different<br />
+situations.<br />
+6. 提交pull request  
+7. 在code-review通过后，你的代码便有机会运行在百度的数万台服务器上~  </p>
+</li>
+</ol>
               
             </div>
           </div>
@@ -287,10 +300,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../en/README/" class="btn btn-neutral float-right" title="README">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../log_rule/" class="btn btn-neutral float-right" title="log_rule">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../roadmap/" class="btn btn-neutral" title="roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../HA_log_compress/" class="btn btn-neutral" title="HA_log_compress"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -316,10 +329,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../roadmap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../HA_log_compress/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../en/README/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../log_rule/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>user_guide - Ether</title>
+  <title>garbage_collection - Ether</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "user_guide";
-    var mkdocs_page_input_path = "cn/user_guide.md";
-    var mkdocs_page_url = "/cn/user_guide/";
+    var mkdocs_page_name = "garbage_collection";
+    var mkdocs_page_input_path = "cn/garbage_collection.md";
+    var mkdocs_page_url = "/cn/garbage_collection/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -67,7 +67,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="./">UserGuide</a>
+        <a class="" href="../user_guide/">UserGuide</a>
         
     </li>
 
@@ -150,8 +150,19 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../garbage_collection/">garbage_collection</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">garbage_collection</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#garbage-collection">Garbage Collection</a></li>
+                
+                    <li><a class="toctree-l4" href="#nameserver">Nameserver</a></li>
+                
+                    <li><a class="toctree-l4" href="#chunkserver">Chunkserver</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -199,19 +210,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">user_guide</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ether">ether用户手册</a></li>
-                
-                    <li><a class="toctree-l4" href="#_1">啊</a></li>
-                
-                    <li><a class="toctree-l4" href="#a">a</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">user_guide</a>
         
     </li>
 
@@ -267,7 +267,7 @@
         
       
     
-    <li>user_guide</li>
+    <li>garbage_collection</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -277,9 +277,25 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ether">ether用户手册</h1>
-<h2 id="_1">啊</h2>
-<h2 id="a">a</h2>
+                <h1 id="garbage-collection">Garbage Collection</h1>
+<p>Nameserver和Chunkserver都使用垃圾收集来避免不必要的资源占用。</p>
+<h2 id="nameserver">Nameserver</h2>
+<h5 id="block">block副本回收</h5>
+<p>如果一个block的副本数超过了用户指定的副本数，nameserver需要发现，并通知chunkserver删除这个block的某个副本。<br />
+这里有多种选择：<br />
+1. 在收到chunkserver的block_report时，检查对应的block，副本数是否超出预期，如果超出，那么通知chunkserver删除。<br />
+2. 在用户减少文件副本数时，发起block副本删除。<br />
+3. 定期扫描所有block，对于超出预期副本数的block，发起副本删除。  </p>
+<p>第2种方式的代价应该是最小的，而且还可以优化为，当副本回收时，仅将副本回收指令记录在chunkserver信息里，当收到chunkserver心跳时，返回这些需要回收的副本列表。<br />
+同时辅以在block_report时，检查report的副本的合法性，不合法的发起删除。</p>
+<h5 id="block_1">垃圾block的回收</h5>
+<p>如果一个文件被删除了，那么它所包含的block都将成为垃圾block，nameserver需要发现，并通知所有包含这个block的chunkserver删除。<br />
+这个可以使用与副本回收相同的解决方案。</p>
+<h2 id="chunkserver">Chunkserver</h2>
+<ol>
+<li>如果磁盘上的某个block不是合法的block（meta中没有或者与meta不一致），chunkserver应该清理这个block<br />
+chunkserver的垃圾收集可以使用单独的后台线程，定期全局扫描数据存储目录的方式实现。</li>
+</ol>
               
             </div>
           </div>
@@ -287,10 +303,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../en/README/" class="btn btn-neutral float-right" title="README">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../HA_log_compress/" class="btn btn-neutral float-right" title="HA_log_compress">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../roadmap/" class="btn btn-neutral" title="roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../file_lock/" class="btn btn-neutral" title="file_lock"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -316,10 +332,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../roadmap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../file_lock/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../en/README/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../HA_log_compress/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

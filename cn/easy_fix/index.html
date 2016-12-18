@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>user_guide - Ether</title>
+  <title>easy_fix - Ether</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "user_guide";
-    var mkdocs_page_input_path = "cn/user_guide.md";
-    var mkdocs_page_url = "/cn/user_guide/";
+    var mkdocs_page_name = "easy_fix";
+    var mkdocs_page_input_path = "cn/easy_fix.md";
+    var mkdocs_page_url = "/cn/easy_fix/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -67,7 +67,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="./">UserGuide</a>
+        <a class="" href="../user_guide/">UserGuide</a>
         
     </li>
 
@@ -136,8 +136,21 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../easy_fix/">easy_fix</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">easy_fix</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#easy-fix">Easy Fix</a></li>
+                
+                    <li><a class="toctree-l4" href="#_1">文档类</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">代码类</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">环境类</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -199,19 +212,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">user_guide</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ether">ether用户手册</a></li>
-                
-                    <li><a class="toctree-l4" href="#_1">啊</a></li>
-                
-                    <li><a class="toctree-l4" href="#a">a</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../user_guide/">user_guide</a>
         
     </li>
 
@@ -267,7 +269,7 @@
         
       
     
-    <li>user_guide</li>
+    <li>easy_fix</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -277,9 +279,27 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ether">ether用户手册</h1>
-<h2 id="_1">啊</h2>
-<h2 id="a">a</h2>
+                <h1 id="easy-fix">Easy Fix</h1>
+<p>这里记录一些待修复，同时初步判断比较容易修复的问题，未选定的是还没有人去做的。</p>
+<p>如果你发现某一项实际已经被完成了,但这里未选定,那么你可以直接提交一个pr选定它。</p>
+<h3 id="_1">文档类</h3>
+<ul>
+<li>[ ] 首先就是本文自己的错别字,需要review</li>
+</ul>
+<h3 id="_2">代码类</h3>
+<ul>
+<li>[ ] <a href="https://github.com/baidu/bfs/blob/master/fuse/bfs_mount.cc">fuse代码</a> review,找到其中拼写或明显的错误</li>
+</ul>
+<h3 id="_3">环境类</h3>
+<ul>
+<li>[ ] 非bash执行small_test.sh时出错, 98: small_test.sh: Syntax error: Bad for loop variable</li>
+<li>[ ] 合并sandbox下的deploy.sh和start_bfs.sh,或者加一个stop_bfs.sh</li>
+<li>[ ] Mac下编译通过</li>
+<li>[ ] Mac下运行</li>
+<li>[ ] Ubuntu下编译通过</li>
+<li>[ ] Ubuntu下运行</li>
+<li>[ ] Windows下Cygwin编译通过</li>
+</ul>
               
             </div>
           </div>
@@ -287,10 +307,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../en/README/" class="btn btn-neutral float-right" title="README">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../file_lock/" class="btn btn-neutral float-right" title="file_lock">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../roadmap/" class="btn btn-neutral" title="roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DiskManager/" class="btn btn-neutral" title="DiskManager"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -316,10 +336,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../roadmap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../DiskManager/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../en/README/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../file_lock/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
