@@ -537,28 +537,18 @@
         }, 
         {
             "location": "/en/README/", 
-            "text": "ether\u6587\u6863\n\n\n\u7b80\u4ecb\n\n\nether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.\n\n\n\u6784\u5efa\n\n\n\u4f7f\u7528\n\n\n\u7528\u6237\u6587\u6863", 
+            "text": "BFS Document\n\n\nRoadMap", 
             "title": "README"
         }, 
         {
-            "location": "/en/README/#ether", 
+            "location": "/en/README/#bfs-document", 
             "text": "", 
-            "title": "ether\u6587\u6863"
+            "title": "BFS Document"
         }, 
         {
-            "location": "/en/README/#_1", 
-            "text": "ether\u662f\u4e00\u4e2a\u57fa\u4e8e Google Protobuf \u7684RPC\u6846\u67b6.", 
-            "title": "\u7b80\u4ecb"
-        }, 
-        {
-            "location": "/en/README/#_2", 
+            "location": "/en/README/#roadmap", 
             "text": "", 
-            "title": "\u6784\u5efa"
-        }, 
-        {
-            "location": "/en/README/#_3", 
-            "text": "\u7528\u6237\u6587\u6863", 
-            "title": "\u4f7f\u7528"
+            "title": "RoadMap"
         }, 
         {
             "location": "/en/roadmap/", 
